@@ -1,0 +1,55 @@
+{
+  "name": "discord-permission-helper",
+  "version": "1.0.0",
+  "sideEffects": false,
+  "author": "maaaathis",
+  "description": "Convert discord permission bitfields to readable strings and check for permissions",
+  "homepage": "https://github.com/maaaathis/discord-permission-helper",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maaaathis/discord-permission-helper.git"
+  },
+  "keywords": [
+    "discord",
+    "discord permission"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.esm",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "package.json"
+  ],
+  "scripts": {
+    "build": "yarn test && tsup src/index.ts --dts --format cjs,esm && attw --pack .",
+    "check": "tsc --project tsconfig.json --noEmit",
+    "format": "yarn prettier --write \"**/*.{js,jsx,ts,tsx,css,scss}\"",
+    "test": "run test:jest && run test:format",
+    "test:jest": "jest",
+    "test:format": "prettier --check \"**/*.{js,jsx,ts,tsx,css,scss}\"",
+    "prepublishOnly": "run test",
+    "release": "yarn build && yarn npm publish && npx jsr publish"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "devDependencies": {
+    "@arethetypeswrong/cli": "^0.16.4",
+    "@jest/globals": "^29.7.0",
+    "@types/node": "^22.7.5",
+    "jest": "^29.7.0",
+    "maathis": "^0.2.1",
+    "prettier": "^3.3.3",
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2",
+    "tsup": "^8.3.0",
+    "typescript": "^5.6.3"
+  },
+  "packageManager": "yarn@4.5.0"
+}

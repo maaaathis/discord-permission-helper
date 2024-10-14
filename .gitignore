@@ -1,0 +1,8 @@
+node_modules
+.DS_Store
+dist
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+.idea/material_theme_project_new.xml
