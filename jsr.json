@@ -1,0 +1,9 @@
+{
+  "$schema": "https://jsr.io/schema/config-file.v1.json",
+  "name": "@mathis/discord-permission-helper",
+  "version": "1.0.0",
+  "exports": "./src/index.ts",
+  "publish": {
+    "include": ["./src/**/*", "./jsr.json", "./README.md", "./tsconfig.json"]
+  }
+}
