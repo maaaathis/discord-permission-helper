@@ -1,4 +1,5 @@
 # Discord Permission Helper
+[![Test](https://github.com/maaaathis/discord-permission-helper/actions/workflows/test.yml/badge.svg)](https://github.com/maaaathis/discord-permission-helper/actions/workflows/test.yml)
 
 This npm package provides a simple implementation for converting and checking Discord permission bitfields.
 
