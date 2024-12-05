@@ -12,14 +12,14 @@ npm i discord-permission-helper
 ## Example usage
 
 ```javascript
-import { PermissionConverter } from 'discord-permission-helper';
+import { DiscordPermissionHelper } from 'discord-permission-helper';
 
-// Create a PermissionConverter instance
-const permissionConverter = new PermissionConverter();
+// Create a DiscordPermissionHelper instance
+const discordPermissionHelper = new DiscordPermissionHelper();
 
 // Convert a permission bitfield to an array of permission names
 const permissionBitfield = '2199023255552n';
-const convertedPermissions = permissionConverter.convertPermission({
+const convertedPermissions = discordPermissionHelper.convertPermission({
   hash: permissionBitfield,
   json: false
 });
@@ -28,13 +28,13 @@ console.log(convertedPermissions);
 // Output: ['VIEW_CREATOR_MONETIZATION_ANALYTICS']
 
 // Check if a specific permission is granted in a bitfield
-const hasPermission = permissionConverter.checkPermission('KICK_MEMBERS', permissionBitfield);
+const hasPermission = discordPermissionHelper.checkPermission('KICK_MEMBERS', permissionBitfield);
 
 console.log(hasPermission);
 // Output: false
 
 // Convert permissions to JSON string
-const jsonPermissions = permissionConverter.convertPermission({
+const jsonPermissions = discordPermissionHelper.convertPermission({
   hash: permissionBitfield,
   json: true
 });
